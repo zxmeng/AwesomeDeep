@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!-- Design by Design Profesionals  Released for free under a Creative Commons Attribution 2.5 License Title : Essence Version : 1.0 Released : 20110518 Description: A two-column fixed-width template. Suitable for blogs and small business websites. -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Awesome Deep</title>
+
+<link href="default.css" rel="stylesheet" type="text/css" />
+
+<!-- Image Preloader -->
+<script src="jquery.min.js"></script>
+
+</head>
+<script>
+$(document).ready(function(){
+	setInterval(function(){
+		if(window.scrollY>=300){
+			$('#updates').css('top',0);
+			$('#updates').css('width',200);
+			$('#updates').css('position','fixed');
+		}
+		else{
+			$('#updates').css('position','static');
+		}
+	},100)
+})
+</script>
+
+<body><div id="mask"></div><table id="pic_div" style="z-index:910; width:100%; height:100%; text-align:center; display:none;position:fixed;"><tr><td style="width:100%;  text-align:center; background:none;" id="mask_"><img id="pic_img" style=" max-height:500px; border-style:solid; border-color:#FFF; border-width:thick"></td></tr></table>
+<table id="readme" style="z-index:910; width:100%; height:100%; display:none;position:fixed;"><tr><td style="width:100%;background:none;x;" id="mask_1"><div style="width:270px; height:170px; background-color:#FFF; padding:40px; margin:auto; line-height:35px"><h2>Awesome Deep</h2><p style=" line-height:40p">Available pages:<br>
+<ul>
+<li>index (pc/mobile)</li>
+<li>registration (pc/mobile)</li>
+</ul>All functionalities are disabled</p></div></td></tr></table>
+<script>
+$(document).ready(function(){
+$('img').click(function(){
+	$('body').css('overflow','hidden');
+	$('#mask').show();
+	$('#pic_img').attr('src',$(this).attr('src'));
+	$('#pic_div').fadeIn(200);	
+})
+$('#mask_').click(function(){
+	$('#pic_div').hide();
+	$('#mask').hide();
+	$('body').css('overflow','scroll');
+	//$('#outer').css('overflow','scroll');
+})
+$('#mask_1').click(function(){
+	$('#readme').hide();
+	$('#mask').hide();
+	$('body').css('overflow','scroll');
+	//$('#outer').css('overflow','scroll');
+})
+})
+function readme(){
+	$('body').css('overflow','hidden');
+	$('#mask').show();
+	$('#readme').fadeIn(200);	
+}
+</script>
+<div id="fb-root"></div>
+
+<div id="header">
+<h1 style="color: white">Awesome Deep</h1>
+<h2 style="color: white">MENG Zhixiang</h2>
+</div>
+<div id="page">
+<div id="content">
+<div  class="post" style=" border-bottom:none">
+	<h1 class="title" id="objective">Objective</h1>
+	<div class="content">
+	<p style="text-align:justify" >This project is to extract Content Targets and Style Targets, and to search for an optimal input image that produces similar response as the content and style targets.</p>
+	</div>
+</div>
+<div  class="post" style=" border-bottom:none">
+	<h1 class="title" id="extract">Extract Content Target and Style Target</h1>
+	<div class="content">
+	<img src="images/algo_01.png" alt="" class="photo" style="width: 60%; height: auto" align="right"  />
+	<img src="images/algo_02.png" alt="" class="photo" style="width: 20%; height: auto" align="right"  />
+	</div>
+</div>
+<div  class="post" style=" border-bottom:none">
+	<h1 class="title" id="gradient">Calculate Loss and Gradients</h1>
+	<div class="content">
+	<img src="images/algo_03.png" alt="" class="photo" style="width: 60%; height: auto" align="right"  />
+	<img src="images/algo_06.png" alt="" class="photo" style="width: 30%; height: auto" align="right"  />
+	<img src="images/algo_07.png" alt="" class="photo" style="width: 30%; height: auto" align="right"  />
+	<img src="images/algo_04.png" alt="" class="photo" style="width: 60%; height: auto" align="right"  />
+	<img src="images/algo_08.png" alt="" class="photo" style="width: 30%; height: auto" align="right"  />
+	<img src="images/algo_09.png" alt="" class="photo" style="width: 30%; height: auto" align="right"  />
+	<img src="images/algo_05.png" alt="" class="photo" style="width: 60%; height: auto" align="right"  />
+	</div>
+</div>
+<div  class="post" style=" border-bottom:none">
+	<h1 class="title" id="results">Results</h1>
+	<div class="content">
+	<table border="1pt" style="float: center; text-align: center" >
+	<tr><td>Content Image</td><td>Style Image</td><td>Transferred Result</td></tr>
+	<tr>
+		<td><img src="images/re1_nj.jpg" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+		<td><img src="images/re1_sn.jpg" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+		<td><img src="images/re1_nj_sn.png" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+	</tr>
+	<tr>
+		<td><img src="images/re2_sf.jpg" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+		<td ><img src="images/re2_sn.jpg" alt="" class="centerphoto" style="width: auto; height: 150px;" /></td>
+		<td><img src="images/re2_sf_sn.png" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+	</tr>
+	<tr>
+		<td><img src="images/re3_gb.jpg" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+		<td><img src="images/re3_ts.jpg" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+		<td><img src="images/re3_gb_ts.png" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+	</tr>
+	<tr>
+		<td><img src="images/re4_bp.jpg" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+		<td><img src="images/re4_wh.jpg" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+		<td><img src="images/re4_bp_wh.png" alt="" class="centerphoto" style="width: auto; height: 150px" /></td>
+	</tr>
+	</table>
+</div></div>
+<div  class="post" style=" border-bottom:none">
+	<h1 class="title" id="iterations">Different Number of Iterations</h1>
+	<div class="content">
+	<img src="images/re_nj_sn_10.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/re_nj_sn_32.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/re_nj_sn_128.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/re_nj_sn_512.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/re_sf_sn_2.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/re_sf_sn_10.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/re_sf_sn_32.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/re_sf_sn_512.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	</div>
+</div>
+<div  class="post" style=" border-bottom:none">
+	<h1 class="title" id="style">Different Combinations of Style Targets</h1>
+	<div class="content">
+	<img src="images/output_nj_sn_32_conv1.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_san_nude_32_conv1.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_nj_sn_32_conv2.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_san_nude_32_conv2.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_nj_sn_32_conv3.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_san_nude_32_conv3.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_nj_sn_32_conv4.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_san_nude_32_conv4.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_nj_sn_32_conv5.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	<img src="images/output_san_nude_32_conv5.png" alt="" class="photo" style="width: 45%; height: auto" align="right"  />
+	</div>
+</div>
+<div  class="post" style=" border-bottom:none">
+	<h1 class="title" id="efficiency">Efficiency</h1>
+	<div class="content">
+	<p style="text-align:justify" >Mainly related to the size of content image, the number of iterations, and the layers in style targets. For 640 x 427 content images, it took around 1000s for 32 iterations, and around 3hr for 512 iterations. With only one layer in style target, it took around 400s for 32 iterations. </p>
+	</div>
+</div>
+
+</div>
+<div id="sidebar">
+<div id="menu">
+<ul id="updates">
+<li><a></a></li>
+<li><a href="#objective" title="">Objective</a></li>
+<li><a href="#extract" title="">Extract Content/Style Targets</a></li>
+<li><a href="#gradient" title="">Calculate Loss/Gradients</a></li>
+<li><a href="#results" title="">Results</a></li>
+<li><a href="#iterations" title="">Different Number of Iterations</a></li>
+<li><a href="#style" title="">Different Combinations of Style Targets</a></li>
+<li><a href="#efficiency" title="">Efficiency</a></li>
+</ul>
+</div>
+
+</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
+
+
+<div id="footer">
+
+</div>
+
+</body></html>
